@@ -1,0 +1,28 @@
+<section  class="sort-section">
+<label >SortBy criteria</label><br>
+<div class="r1">
+<input type="radio"  name="answer" (click)="sortByPercentage()" >Percentage <br>
+<input type="radio"   name="answer" (click)=" sortByAttempts()">NoOfAttempts<br>
+<input type="radio" name="answer" (click)=" sortByNoOfsubLearning()">SubjectsLearning<br>
+
+</div></section>
+<div class ="answers">
+    <table>
+<thead>
+    <th>StudentNamees</th>
+    <th>Roll No</th>
+   <th>Number of Attempts</th>
+   <th>Percentage</th>
+   <th>Subjects</th>  
+</thead>
+<tbody>
+<tr *ngFor="let ss of percentages">
+    <td>{{ss.rollno}}</td>
+    <td>{{ss.name}}</td>
+    <td>{{ss.numberOfAttempts}}</td>
+    <td>{{ss.percentage}}</td>
+    <td>{{ss.subjectLearning}}</td>
+</tbody>
+</table>
+
+</div>
